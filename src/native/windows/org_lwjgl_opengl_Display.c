@@ -176,8 +176,8 @@ JNIEXPORT jlong JNICALL Java_org_lwjgl_opengl_WindowsDisplay_nCreateWindow(JNIEn
 	static bool oneShotInitialised = false;
 	if (!oneShotInitialised) {
 		if (!registerWindow(lwjglWindowProc, WINDOWCLASSNAME)) {
-			throwException(env, "Could not register window class");
-			return 0;
+			// throwException(env, "Could not register window class");
+			// return 0;
 		}
 		oneShotInitialised = true;
 	}
